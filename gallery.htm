@@ -1,0 +1,78 @@
+<html>
+
+<head>
+<title></title>
+<link rel="stylesheet" type="text/css" href="gallerystyle.css" />
+<script src="Scripts/jquery-1.9.1.js" type="text/javascript"></script>
+<!-- Do not edit IE conditional style below -->
+<!--[if gte IE 5.5]>
+<style type="text/css">
+#motioncontainer {
+width:expression(Math.min(this.offsetWidth, maxwidth)+'px');
+}
+</style>
+<![endif]-->
+<!-- End Conditional Style -->
+
+<script type="text/javascript" src="motiongallery.js">
+</script>
+
+<script type="text/javascript" language="javascript">
+    $(document).ready(function () {        
+        for (var j = 0; j < 10; j++) {
+            var div = document.getElementById('trueContainer');            
+
+            var a = document.createElement('a');
+            div.appendChild(a);
+
+            var img = new Image();
+            img.src = 'http://www.jdsports.co.uk/lib/hlight/nike-running/assets/images/misc/video-placeholder.jpg';
+            img.style.borderColor = 'Black';
+            img.style.borderStyle = 'solid';
+            img.style.borderWidth = 'thin';
+            img.style.width = '150px';
+            img.style.height = '100px';
+            //img.onclick = function () {
+            //window.location.href = "javascript:enlargeimage('Video-Thumb.jpg')";
+            //};
+
+            a.href = "javascript:enlargeimage('Video-Thumb.jpg')";
+
+            a.innerHTML += '<span style=position:absolute;color:Black;>Video Title ' + (j + 1) + '<br />Video Description</span>';
+            a.appendChild(img);            
+        }
+    });
+</script>
+
+</head>
+
+<body>
+
+<div id="motioncontainer" style="position:relative;overflow:hidden;">
+    <div id="motiongallery" style="position:absolute;left:0;top:0;white-space: nowrap;">
+        <div id="trueContainer">
+            
+        </div>
+    </div>
+</div>
+
+
+
+<!--<div id="motioncontainer" style="position:relative;overflow:hidden;">
+    <div id="motiongallery" style="position:absolute;left:0;top:0;white-space: nowrap;">
+        <nobr id="trueContainer">
+            <a href="javascript:enlargeimage('Video-Thumb.jpg')"><span>Video Title 1</span><img alt="" src="Video-Thumb.jpg" border="1" /></a> 
+            <a href="javascript:enlargeimage('Video-Thumb.jpg', 300, 300)"><span>Video Title 2</span><img alt="" src="Video-Thumb.jpg" border="1"/></a> 
+            <a href="#"><span>Video Title 3</span><img alt="" src="Video-Thumb.jpg" border="1"/></a>
+            <a href="#"><span>Video Title 4</span><img alt="" src="Video-Thumb.jpg" border="1"/></a> 
+            <a href="#"><span>Video Title 5</span><img alt="" src="Video-Thumb.jpg" border="1"/></a> 
+            <a href="#"><span>Video Title 6</span><img alt="" src="Video-Thumb.jpg" border="1"/></a> 
+            <a href="#"><span>Video Title 7</span><img alt="" src="Video-Thumb.jpg" border="1"/></a> 
+            <a href="#"><span>Video Title 8</span><img alt="" src="Video-Thumb.jpg" border="1"/></a> 
+            <a href="#"><span>Video Title 9</span><img alt="" src="Video-Thumb.jpg" border="1"/></a>
+        </nobr>
+    </div>
+</div>-->
+
+</body>
+</html>
